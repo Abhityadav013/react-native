@@ -1,20 +1,22 @@
-import {Text, View, useColorScheme, StyleSheet} from 'react-native';
 import React from 'react';
-function App() {
-  const isDarkMode = useColorScheme() === 'light';
+import {View, Text, useColorScheme, StyleSheet} from 'react-native';
+
+export function App(): JSX.Element {
+  const isDarkMode = useColorScheme() === 'dark';
   return (
     <View style={styles.container}>
-      <Text style={isDarkMode ? styles.darkText : styles.whiteText}>
-        Hello World
+      <Text style={isDarkMode ? styles.whiteText : styles.darkText}>
+        HELLO, Welcome to React-Native Series by ABHIT YADAV
       </Text>
     </View>
   );
 }
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems: 'center',
   },
   whiteText: {
     color: '#FFFFFF',
